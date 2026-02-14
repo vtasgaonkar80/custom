@@ -4,4 +4,5 @@
 
 
 def custom():
+    """ docstring """
     return "Hello"
