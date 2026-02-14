@@ -24,8 +24,11 @@ jobs:
                if [-f requirements.txt ]; then pip install -r requirements.txt; fi
             - name: Check the syntax with Flake8
               run: |
-                flake8 .
-                
+                flake8 . --count --statistics
+            - name: Unit testing with pytest
+              run: |
+                pytest -v 
+
 
 
 
